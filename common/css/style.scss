@@ -1,8 +1,9 @@
 $normal-fontColor : #3d4246;
-$primary-fontColor : #189dff;
+$primary-fontColor : #000;
 $white-fontColor : #fff;
 $primary-bgColor : #f2f2f2;
 $grey-bgColor : #fafafa;
+$price-fontColor :#ff3d3d;
 $imagebar-color-01:#96d2dc;
 $imagebar-color-02:#dddede;
 $imagebar-color-03:#eeced2;
@@ -11,7 +12,7 @@ $color-text-shadow: rgba(0,0,0,0.4);
 $breakpoint: 768px;
 $nav-height: 50px;
 $font-price :"SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-$font-menu :'Skia','sans-serif'; 
+$font-menu :'Poppins','Skia','sans-serif',"Helvetica Neue", "Helvetica", "Arial"; 
 
 @font-face {
   font-family: $font-menu;
@@ -24,7 +25,8 @@ $font-menu :'Skia','sans-serif';
 a {
   color:$normal-fontColor;
   &:hover {
-      color:$primary-fontColor
+      color:#189dff;
+      text-decoration: none
   }
 }
 .section-imagebar .image-bar__item{
@@ -39,7 +41,12 @@ a {
       font-family: Montserrat, sans-serif
   }
 }
-
+header {
+  margin-bottom:10px;
+  @media screen and (max-width: $breakpoint){
+    margin-bottom:0;
+  }     
+}
 .nav-area .list-nav {
   display:flex;
 }
@@ -50,11 +57,15 @@ a {
     display: inline-block;
     position: relative;
     font-size: 15px;
-    height: 39px;
+    height: 34px;
     padding: 0 5px;
     font-family: $font-menu;
     @media screen and (max-width: $breakpoint){
       display: block;
+      line-height: 33px;
+      &:after {
+        display: none
+      }
     }    
     &:after {
         content: '';
@@ -77,7 +88,14 @@ a {
 .site-nav__label:after {transition: all .5s;}
 
 
-.list-category li a img {width: 75px;}
+.list-category button {
+ display: inline-block;
+ border:solid 1px #e6e6e6;
+ padding:10px;
+ border-radius: 26px;
+ background:#fff;
+ outline:none
+}
 
 .section-imagebar .row .col-md {padding:0}
 
@@ -87,16 +105,10 @@ a {
     background-color:$imagebar-color-01;
     background-position:center center
 }
-.section-imagebar .imagebar-04 .image-bar__item{
-    background: url(../../images/item-earing.jpg);
-    background-size:cover;
-    background-color:$imagebar-color-01;
-    background-position:center center
-}
 .section-imagebar .imagebar-02 .image-bar__item{
-    background: url(../../images/item-skert.jpg);
-    background-size:cover;
-    background-color:$imagebar-color-02
+  background: url(../../images/item-top-onepice.jpg);
+  background-size:cover;
+  background-position:center center
 }
 .section-imagebar .imagebar-03 .image-bar__item{
     background: url(../../images/item-b-skert.jpg);
@@ -104,8 +116,10 @@ a {
     background-color:$imagebar-color-03
 }
 .section-imagebar .imagebar-04 .image-bar__item{
-    background-size:cover;
-    background-color:$imagebar-color-04
+  background: url(../../images/item-earing.jpg);
+  background-size:cover;
+  background-color:$imagebar-color-01;
+  background-position:center center
 }
 /* items */
 .list-items .item {
@@ -115,21 +129,20 @@ a {
     padding:5px 0 15px 0;
     .txt-price {
       font-family: $font-price;
-      font-size: 1rem;
-      color:#ff3d3d
+      color:$price-fontColor
     }
     .txt-name {
       font-size: 1rem;
     }    
   }
 }
+.txt-price {
+  font-family: $font-price;
+  font-size: 1.5rem;
+  color:$price-fontColor
+}
 /**/
-#content2,
-#content3,
-#content4,
-#content5,
-#content6,
-#content7 { display: none; }
+
 
 .section-category .list-category {
     position: relative;
@@ -140,7 +153,6 @@ a {
     -webkit-overflow-scrolling: touch;
     text-align: center;
     li {
-      width: 80px;
       margin: 5px 0 0 5px;      
       a {
         position: relative;
@@ -151,39 +163,53 @@ a {
       }      
     }
 }
-
+.tit-center-area {
+  overflow: hidden;
+  margin-bottom:10px; 
+  text-align: center;
+  .tit {
+    position: relative;
+    display: inline-block;
+    padding:40px 0 10px 0;
+    font-size:1.25rem;
+    font-weight:600;
+    font-family: $font-menu;
+    color:#000;
+    &:after {
+      content:"";
+      display:block;
+      position: absolute; 
+      width:70px;
+      height:3px;
+      background:#000;
+      left:50%;
+      top:77px;
+      margin-left:-35px;
+    }
+  }  
+}
 .tit-area {
     overflow: hidden;
     position: relative;
-    border-bottom:solid 1px #e6e6e6;
+    border-bottom:solid 1px #000;
     margin-bottom:10px;
     .tit {
-        padding:40px 0 10px 0;
-        font-size:1.5rem;
-        font-weight:600
+        padding:40px 0 0 0;
+        font-size:1.25rem;
+        font-weight:600;
+        font-family: $font-menu;
+        color:#000;
     }
-    .more {
-      margin-top:47px;
-    };
 }
 
-/**/
-.nav-item {
-  border-bottom:solid 1px #e6e6e6;
-  &:hover {
-    background:#f2f2f2;
-  }
-  &.active-link .dropdown-container {
-    display:block
-  }
-}
+
 
 .dropdown-container {
-  width: 100%;
   left: 0;
-  top: 147px;
+  top: 61px;
   position: absolute;
   display: none;
+  width:190px;
   z-index: 999;
   background: #f1f1f1;
     @media screen and (max-width: $breakpoint){
@@ -192,9 +218,10 @@ a {
       border-top:0;
     }     
 }
-
+.wrap-inner-header {border-bottom: solid 1px #e6e6e6}
 section.inner-header-announce {
     background:$primary-bgColor;
+    border-bottom: solid 1px #e6e6e6;
     .notice {
       display:block;
       margin:0;
@@ -224,13 +251,15 @@ section.inner-header-middle {
 }
 
 section.inner-header {
+    width:1170px;
+    margin:0 auto;
     display: flex;  
     height:80px;
     @media screen and (max-width: $breakpoint){
+      width: 100%;
       position: fixed;
       z-index: 100;
       background-color: #fff;
-      box-shadow:0 -7px 19px rgba(0,0,0,.5);      
       display: block;
       height:49px;
       padding:0;
@@ -238,7 +267,6 @@ section.inner-header {
       transition:all .2s;
       &.shrink {
         height:49px;
-        background-color: #f2f2f2;
         position:fixed;
         top:0;
       }
@@ -257,9 +285,14 @@ section.inner-header {
         width: auto;
         h1 {
           position: relative;
-          top:-7px;
+          top:-4px;
           padding-left:10px;
           margin-bottom:0;
+        }
+        .icon-cart {
+          position:absolute;
+          right:57px;
+          top:10px;
         }
       }
       h1 a img {
@@ -271,11 +304,11 @@ section.inner-header {
     }
     .nav-area {
       width:70%;
-      margin-top:17px;
+      margin-top:20px;
       @media screen and (max-width: $breakpoint){
-        border-top:solid 1px #ccc;
         margin-top:0;
         width: 100%;
+        border-top:solid 1px #e6e6e6;
       }      
     }
     .srh-area {
@@ -293,9 +326,6 @@ section.inner-header {
       }           
     }
 }
-
-
-
 /* box hover effect moudle */
 @mixin overlays($z-index:null) {
     position: absolute;
@@ -404,7 +434,6 @@ section.inner-header {
   }
 }
 
-
 .product {
   .product-body {
     .product-title {
@@ -413,6 +442,15 @@ section.inner-header {
     .product-price {
       color:$primary-fontColor
     }
+  }
+}
+.btn-more {
+  padding-left:3.5rem;
+  padding-right:3.5rem;
+  i {
+    font-size: 0.6125rem;
+    position: relative;
+    top:-1px;
   }
 }
 
@@ -487,11 +525,21 @@ section.inner-header {
   padding:10px 40px 10px 40px;
   @media screen and (max-width: $breakpoint) {
     padding:10px 15px 10px 15px;
+    .list-sns {
+      margin-bottom: 5px;
+      margin-top:20px;
+      li {
+        margin:0 5px;
+      }
+    }
+    .foot-logo {
+      margin-bottom:5px;
+    }
   }
   a {
     color:#2b9db1;
     &:hover {
-      color:$primary-fontColor;
+      color:#189dff;
       text-decoration: none
     }
   }
@@ -503,7 +551,7 @@ section.inner-header {
     margin-top:30px;
   }
   .copy {
-    padding-top:35px;
+    padding-top:0;
     color:#cacaca;
     text-align:center;
     .logo {
@@ -523,6 +571,13 @@ section.inner-header {
   height: $nav-height;
   width: 50px;
 }
+/**/
+.nav-item {
+  position: relative;
+  &.active-link .dropdown-container {
+    display:block
+  }
+}
 @media screen and (max-width: $breakpoint) {
   // Hamburger nav visible on mobile only
   .nav-mobile {
@@ -537,6 +592,7 @@ section.inner-header {
       margin-bottom:0;
       .nav-item {
         display: block !important;
+        border-bottom:solid 1px #e6e6e6;
         .nav-link {
           position: relative;
           i {
@@ -559,11 +615,14 @@ section.inner-header {
 }
 @media screen and (min-width: $breakpoint) {
   // Hamburger nav visible on mobile only
-
+  .pagetop {
+    display: none !important
+  } 
   section.inner-header {
     
     .list-nav {
       display:flex !important;
+      margin-bottom:0
 
     }
   }
@@ -618,21 +677,77 @@ section.inner-header {
   }
 }
 
-
-
+.main-carousel-1,
+.main-carousel-2,
+.main-carousel-3,
+.main-carousel-4,
+.main-carousel-5,
+.main-carousel-6,
+.main-carousel-7,
+.big-carousel {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  padding-bottom:70px;
+  @media screen and (max-width: $breakpoint) {
+    padding-bottom: 29px
+  }
+}
+.bigcarosel-top{
+  display: block;
+  overflow: hidden;
+  position:relative;
+  padding:0 !important;
+}
 /*common*/
-// a.item {
-//   overflow: hidden;
-// }
-// a.item img {
-//   transition: all 1s ease-in-out 0s;
-//   -moz-transition: all 1s ease-in-out 0s;
-//   -webkit-transition: all 1s ease-in-out 0s;
-//   -o-transition: all 1s ease-in-out 0s;  
-// }
-// a.item:hover  img {
-//   transform: scale(1.2);
-//   -moz-transform: scale(1.2);
-//   -webkit-transform: scale(1.2);
-//   -o-transform: scale(1.2);  
-// }
+a.item {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  &:after {
+    position:absolute;
+    content: "";
+    display:block;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    border:solid 1px rgba(193,193,193,.4)
+  }
+}
+a.item img {
+  transition: all 1s ease-in-out 0s;
+  -moz-transition: all 1s ease-in-out 0s;
+  -webkit-transition: all 1s ease-in-out 0s;
+  -o-transition: all 1s ease-in-out 0s;  
+}
+a.item:hover  img {
+  transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);  
+}
+@media screen and (max-width: $breakpoint) {
+  .bigcarosel {
+    padding:0
+  }
+}
+
+.bigcarosel,
+.pickup {
+  margin-top:40px;
+  .card-title {
+    font-size: 1.5rem
+  }
+
+}
+
+
+.tabcontent {display: none}
+.tabcontent:first-child {display: block}
+.tablinks {
+  background: #fff;
+  &.active {
+    border-color:#000
+  }
+}

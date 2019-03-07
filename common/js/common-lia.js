@@ -27,26 +27,6 @@ var headerNav = {
   }
 };
 
-
-// var categorySlider = {
-//   init :  function() {
-//     $('.main-carousel').each(function(index,value){
-//       var cate = $(this);
-//       cate.flickity({
-//         // options
-//         cellAlign: 'left',
-//         contain: true
-//       });
-//     })    
-//   }
-// };
-
-var bigSlider = {
-  init :  function() {
-  
-  }
-};
-
 /*============================================================================
   add somethings by ksk 20190115
 ==============================================================================*/
@@ -82,28 +62,6 @@ var scrollTap = {
   }  
 };
 
-
-// $("#user-nav-tabs li").on('click', function(e) {
-//   var targetLink = $(e.currentTarget.children[0]).attr("href").slice(1);
-//   var content_map = {
-//       c1  : "#content1",
-//       c2  : "#content2",
-//       c3  : "#content3",
-//       c4  : "#content4",
-//       c5  : "#content5",
-//       c6  : "#content6",
-//       c7  : "#content7"                        
-//   }
-//   $(e.currentTarget).siblings().removeClass("active");
-//   $.each(content_map, function(hash, elid) {
-//       if (hash == targetLink) {
-//           $(elid).show();
-//           $(e.currentTarget).addClass("active");
-//       } else {
-//           $(elid).hide();
-//       }
-//   });
-// });
 
 var getCurrentScroll = function() {
   return window.pageYOffset || document.documentElement.scrollTop;
@@ -321,7 +279,8 @@ $(document).ready(function(){
     $('.big-carousel-top').owlCarousel({
       center: true,
       autoplay:true,
-      autoplayTimeout:2000,
+      autoplayHoverPause:true,
+      autoplayTimeout:3000,
       items:1,
       loop:true,
       margin:10,
@@ -339,7 +298,8 @@ $(document).ready(function(){
       loop:true,
       margin:10,
       autoplay:true,
-      autoplayTimeout:2000,
+      autoplayHoverPause:true,
+      autoplayTimeout:3000,
       navText:['<i class="fas fa-arrow-left"></i>','<i class="fas fa-arrow-right"></i>'],
       responsive:{
           600:{
@@ -347,43 +307,7 @@ $(document).ready(function(){
           }
       }
  
-    });
- 
-
-    // var tabWrapper = $('#tab-block')
-    
-    // tabMnu = tabWrapper.find('.tab-mnu  li'),
-
-    // tabContent = tabWrapper.find('.tab-cont > .tab-pane');
-
-    // tabContent.not(':first-child').hide();
-
-    // tabMnu.each(function(i){
-    //   $(this).attr('data-tab','tab'+i);
-    // });
-
-    // tabContent.each(function(i){
-    //   $(this).attr('data-tab','tab'+i);
-    // });
-
-    // tabMnu.click(function(){
-    //   var tabData = $(this).data('tab');
-    //   tabWrapper.find(tabContent).hide();
-    //   tabWrapper.find(tabContent).filter('[data-tab='+tabData+']').show(); 
-    // });
-
-    // $('.tab-mnu > li').click(function(){
-    //   alert('dd');
-    //   var before = $('.tab-mnu li.active');
-    //   before.removeClass('active');
-    //   $(this).addClass('active');
-    // });    
-
-
-    // $('#myTab li a').on('click', function (e) {
-    //   e.preventDefault()
-    //   $(this).tab('show')
-    // });    
+    }); 
 });
 
 
@@ -401,20 +325,3 @@ function openClothes(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-
-
-function redirectStore(){
-  if (screen.width==800||screen.height==600) //if 800x600
-  window.location.replace("http://www.netscape.com")
-  
-  else if (screen.width==640||screen.height==480) //if 640x480
-  window.location.replace("http://www.microsoft.com")
-  
-  else if (screen.width==1024||screen.height==768) //if 1024x768
-  window.location.replace("http://www.dynamicdrive.com")
-  
-  else //if all else
-  window.location.replace("http://freewarejava.com") 
-}
-
-
