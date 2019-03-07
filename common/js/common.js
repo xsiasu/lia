@@ -3,7 +3,16 @@
 
 
 
+// 停止、開始でfunction書くのが面倒なので1つにまとめます。
+var movefun = function( event ){
+  event.preventDefault();
+}
 
+// スクロール停止の処理
+window.addEventListener( 'touchmove' , movefun , { passive: false } );
+
+// スクロール停止することを停止する処理
+window.removeEventListener( 'touchmove' , movefun, { passive: false } );
 
 
 
@@ -117,27 +126,7 @@ var scrollTap = {
 //   $(this).toggleClass("active").next().slideToggle();
 // });
 
-$("#user-nav-tabs li").on('click', function(e) {
-  var targetLink = $(e.currentTarget.children[0]).attr("href").slice(1);
-  var content_map = {
-      c1  : "#content1",
-      c2  : "#content2",
-      c3  : "#content3",
-      c4  : "#content4",
-      c5  : "#content5",
-      c6  : "#content6",
-      c7  : "#content7"                        
-  }
-  $(e.currentTarget).siblings().removeClass("active");
-  $.each(content_map, function(hash, elid) {
-      if (hash == targetLink) {
-          $(elid).show();
-          $(e.currentTarget).addClass("active");
-      } else {
-          $(elid).hide();
-      }
-  });
-});
+
 
 var getCurrentScroll = function() {
   return window.pageYOffset || document.documentElement.scrollTop;
@@ -195,4 +184,28 @@ $(document).ready(function(){
   headerNav.init();
   featuredPromotions.init();
   bigSlider.init();
+
+
+
+  $("#user-nav-tabs li").on('click', function(e) {
+    var targetLink = $(e.currentTarget.children[0]).attr("href").slice(1);
+    var content_map = {
+        c1  : "#content1",
+        c2  : "#content2",
+        c3  : "#content3",
+        c4  : "#content4",
+        c5  : "#content5",
+        c6  : "#content6",
+        c7  : "#content7"                        
+    }
+    $(e.currentTarget).siblings().removeClass("active");
+    $.each(content_map, function(hash, elid) {
+        if (hash == targetLink) {
+            $(elid).show();
+            $(e.currentTarget).addClass("active");
+        } else {
+            $(elid).hide();
+        }
+    });
+  });  
 });

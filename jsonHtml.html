@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<ul id="newItems">
+</ul>
+
+
+
+<script>
+let product = {
+    "results": [
+        {
+            "title": "RajiniKanth", 
+            "image":"https://www.rakuten.ne.jp/gold/liaanela/images/new-item/new-item-01.jpg",
+            "href": "https://item.rakuten.co.jp/liaanela/01231912399/", 
+            "price": 1 
+        },
+        {
+            "title": "sss", 
+            "image":"https://www.rakuten.ne.jp/gold/liaanela/images/new-item/new-item-01.jpg",
+            "href": "https://item.rakuten.co.jp/liaanela/01231912399/", 
+            "price": 2 
+        },
+        {
+            "title": "fff", 
+            "image":"https://www.rakuten.ne.jp/gold/liaanela/images/new-item/new-item-01.jpg",
+            "href": "https://item.rakuten.co.jp/liaanela/01231912399/", 
+            "price": 3 
+        },
+        {
+            "title": "RajinfgfdgiKanth", 
+            "image":"https://www.rakuten.ne.jp/gold/liaanela/images/new-item/new-item-01.jpg",
+            "href": "https://item.rakuten.co.jp/liaanela/01231912399/", 
+            "price": 4 
+        }            
+    ]
+}
+
+
+function createNode(element) {
+    return document.createElement(element);
+}
+
+function append(parent, el) {
+    return parent.appendChild(el);
+}
+
+let list = document.getElementById('newItems');    
+
+function ItemsPrint(productdata,list) {
+    let newItemList = productdata.results;
+    let prt = newItemList.map(newItemList => {
+        let content = `
+            <li class='col-sm col-12'>
+                <a href='${newItemList.href}' class='item'>
+                    <img src='${newItemList.image}' width='100%'  max-width='340px'>
+                </a>
+                <div class='txt-account'>
+                  <a href='${newItemList.href}'>
+                  <span class='txt-product'>${newItemList.title}</span>
+                  </a>
+                  <span class='d-block txt-price'>${newItemList.price}<small>円</small></span>
+                </div>
+            </li>`;
+        return content;
+    });
+    list.innerHTML = prt;
+}
+
+new ItemsPrint(product, list);
+
+
+
+
+
+</script>
+
+</body>
+</html>

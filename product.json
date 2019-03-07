@@ -1,14 +1,28 @@
 {
-    'topbanner' : [
-        'copy': '',
-        'href' : '',
-        'alt': ''
-    ],
-    [
-
-    ],
-    [
-        
+    "results": [
+        {
+            "title": "RajiniKanth", 
+            "image":"",
+            "href": 68, 
+            "price": "1200!" 
+        },
+        {
+            "title": "RajiniKanth", 
+            "image":"",
+            "href": 68, 
+            "price": "1200!" 
+        },
+        {
+            "title": "RajiniKanth", 
+            "image":"",
+            "href": 68, 
+            "price": "1200!" 
+        },
+        {
+            "title": "RajiniKanth", 
+            "image":"",
+            "href": 68, 
+            "price": "1200!" 
+        }            
     ]
-    
 }
