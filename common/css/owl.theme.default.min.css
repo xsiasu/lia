@@ -59,5 +59,10 @@
             display: block;
             width: 100%;
             text-align: center
-        }               
+        }          
+        
+        .tab-content .owl-theme .owl-dots {
+            text-align: left !important
+        }
+        
     }

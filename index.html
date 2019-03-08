@@ -15,25 +15,12 @@
   <link rel="stylesheet" href="common/css/owl.theme.default.min.css">
   <link rel="stylesheet" href="common/css/owl.carousel.min.css">
   <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">  
-  <style>
-  @media (max-width: 576px) {
-    .col-6,
-    .col-12 {padding: 0 5px}
-    .txt-price {font-size: 1rem}
-    .container-mobile {
-      padding-left:25px !important;
-      padding-right:25px !important;
-    }
-  }  
-  .txt-account {margin-bottom: 20px}
-  </style>
 </head>
-<body>
-
+<body class="main">
 <header>
   <!-- announce -->
   <section class="container-fluid inner-header-announce text-center">
-      <a href="#" class="notice">お知らせ 【OPEN】 2019.3 NEW OPEN!</a>
+      <a href="#" class="notice">お知らせ 【OPEN】 2019.3 NEW OPEN!</a><span class="timer" id="time"></span>
   </section> 
   <!--// announce -->
   <!-- util -->
@@ -211,13 +198,13 @@
     </div>
     <div class="newItems-area"> 
         <div class="container container-mobile">
-            <ul class="row list-unstyled list-items">
+            <ul class="row list-unstyled list-items mgb0">
               <li class="col-sm col-12">
                 <a href="https://item.rakuten.co.jp/liaanela/01231912399/" class="item">
                     <img src="images/new-item/new-item-01.jpg" width="100%"  max-width="340px">
                 </a>
                 <div class="txt-account text-center">
-                  <a href="#">
+                  <a href="https://item.rakuten.co.jp/liaanela/01231912399/">
                   <span class="txt-product">バックデザインボーダーワンピース</span>
                   </a>
                   <span class="d-block txt-price">2980<small>円</small></span>
@@ -228,7 +215,7 @@
                   <img src="images/new-item/new-item-02.jpg" width="100%"  max-width="340px">
                 </a>
                 <div class="txt-account text-center">
-                  <a href="#">
+                  <a href="https://item.rakuten.co.jp/liaanela/01371912422/">
                   <span class="txt-product">重ね着風セットアップ</span>
                   </a>
                   <span class="d-block txt-price">3980<small>円</small></span>
@@ -240,14 +227,14 @@
                   <img src="images/new-item/new-item-03.jpg" width="100%"  max-width="340px">
                 </a>
                 <div class="txt-account text-center">
-                  <a href="#">
+                  <a href="https://item.rakuten.co.jp/liaanela/01081913407/">
                   <span class="txt-product">ギンガムチェックシャツ</span>
                   </a>
                   <span class="d-block txt-price">4980<small>円</small></span>
                 </div>
             </li>
             </ul>
-            <div class="text-center">
+            <div class="text-right">
             <a href="https://item.rakuten.co.jp/liaanela/c/0000000141/" class="btn btn-dark btn-sm btn-more"><i class="fas fa-arrow-right"></i> View More</a>
             </div>
           </div>
@@ -287,24 +274,24 @@
   <div class="tab-content">
     <!-- top -->
     <div class="top tabcontent" id="top">
-      <div class="container">
+      <div class="container inner-container">
         <div class="main-carousel-1 owl-theme">
           <!--1-->
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01081913407/" class="item">
-              <img src="images/top/top-item-01.jpg" width="100%">
+              <img class="lazyload" data-src="images/top/top-item-01.jpg" width="100%">
             </a>
-                <div class="txt-account text-center">
-                  <a href="https://item.rakuten.co.jp/liaanela/01081913407/">
-                  <span class="txt-product">ギンガムチェックシャツ</span>
-                  </a>
-                  <span class="d-block txt-price">4980<small>円</small></span>
-                </div>              
+            <div class="txt-account text-center">
+              <a href="https://item.rakuten.co.jp/liaanela/01081913407/">
+              <span class="txt-product">ギンガムチェックシャツ</span>
+              </a>
+              <span class="d-block txt-price">4980<small>円</small></span>
+            </div>              
           </div>
           <!--2-->
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01081913408/" class="item">
-              <img src="images/top/top-item-02.jpg" width="100%">
+              <img class="lazyload" data-src="images/top/top-item-02.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01081913408/">
@@ -316,7 +303,7 @@
           <!--3-->
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01091912365/" class="item">
-              <img src="images/top/top-item-03.jpg" width="100%">
+              <img class="lazyload" data-src="images/top/top-item-03.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01091912365/">
@@ -328,7 +315,7 @@
           <!--4-->
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01061912356" class="item">
-              <img src="images/top/top-item-04.jpg" width="100%">
+              <img class="lazyload" data-src="images/top/top-item-04.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01061912356">
@@ -340,7 +327,7 @@
           <!--5-->
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01061912380/" class="item">
-              <img src="images/top/top-item-05.jpg" width="100%">
+              <img class="lazyload" data-src="images/top/top-item-05.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01061912380/">
@@ -352,7 +339,7 @@
           <!--6-->
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01061912380/" class="item">
-              <img src="images/top/top-item-06.jpg" width="100%">
+              <img class="lazyload" data-src="images/top/top-item-06.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01061912380/">
@@ -362,19 +349,19 @@
                 </div>              
           </div>
         </div>
-        <div class="text-center">
-        <a href="" class="btn btn-dark btn-sm btn-more"><i class="fas fa-arrow-right"></i> View More</a>
+        <div class="btn-more-area">
+        <a href="https://item.rakuten.co.jp/liaanela/c/0000000104/" class="btn btn-dark btn-sm btn-more"><i class="fas fa-arrow-right"></i> View More</a>
         </div>
       </div>
     </div>
     <!-- bottom -->
     <div class="bottom tabcontent" id="bottom">
-      <div class="container">
+      <div class="container inner-container">
         <div class="main-carousel-2 owl-theme">
           <!-- 1 -->
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01211912417/" class="item">
-              <img src="images/bottom/bottom-item-01.jpg" width="100%">
+              <img class="lazyload" data-src="images/bottom/bottom-item-01.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01211912417/">
@@ -386,7 +373,7 @@
           <!-- 2 -->
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01211912374/" class="item">
-              <img src="images/bottom/bottom-item-02.jpg" width="100%">
+              <img class="lazyload" data-src="images/bottom/bottom-item-02.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01211912374/">
@@ -398,7 +385,7 @@
           <!-- 3 -->
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01211912406/" class="item">
-              <img src="images/bottom/bottom-item-03.jpg" width="100%">
+              <img class="lazyload" data-src="images/bottom/bottom-item-03.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01211912406/">
@@ -410,7 +397,7 @@
           <!-- 4 -->
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01211912368/" class="item">
-              <img src="images/bottom/bottom-item-04.jpg" width="100%">
+              <img class="lazyload" data-src="images/bottom/bottom-item-04.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01211912368/">
@@ -422,7 +409,7 @@
           <!-- 5 -->
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01211822271/" class="item">
-              <img src="images/bottom/bottom-item-05.jpg" width="100%">
+              <img class="lazyload" data-src="images/bottom/bottom-item-05.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01211822271/">
@@ -431,10 +418,10 @@
                   <span class="d-block txt-price">4980<small>円</small></span>
                 </div>              
           </div>
-          <!-- 5 -->
+          <!-- 6 -->
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01211912418/" class="item">
-              <img src="images/bottom/bottom-item-06.jpg" width="100%">
+              <img class="lazyload" data-src="images/bottom/bottom-item-06.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01211912418/">
@@ -444,19 +431,19 @@
                 </div>              
           </div>
         </div>
-        <div class="text-center">
-          <a href="" class="btn btn-dark btn-sm btn-more"><i class="fas fa-arrow-right"></i> View More</a>
+        <div class="btn-more-area">
+          <a href="https://item.rakuten.co.jp/liaanela/c/0000000105/" class="btn btn-dark btn-sm btn-more"><i class="fas fa-arrow-right"></i> View More</a>
           </div>
       </div>
     </div>
 
     <!-- onepice -->
     <div class="onepice tabcontent" id="onepice">
-      <div class="container">
+      <div class="container inner-container">
         <div class="main-carousel-3 owl-theme">
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01231912355/" class="item">
-              <img src="images/onepice/item-onepice-01.jpg" width="100%">
+              <img class="lazyload" data-src="images/onepice/item-onepice-01.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01231912355/">
@@ -467,7 +454,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01231912376/" class="item">
-              <img src="images/onepice/item-onepice-02.jpg" width="100%">
+              <img class="lazyload" data-src="images/onepice/item-onepice-02.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01231912376/">
@@ -478,7 +465,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01231912404/" class="item">
-              <img src="images/onepice/item-onepice-03.jpg" width="100%">
+              <img class="lazyload" data-src="images/onepice/item-onepice-03.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01231912404/">
@@ -489,7 +476,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01231912399/" class="item">
-              <img src="images/onepice/item-onepice-04.jpg" width="100%">
+              <img class="lazyload" data-src="images/onepice/item-onepice-04.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01231912399/">
@@ -500,7 +487,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01231912358-1/" class="item">
-              <img src="images/onepice/item-onepice-05.jpg" width="100%">
+              <img class="lazyload" data-src="images/onepice/item-onepice-05.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01231912358-1/">
@@ -511,7 +498,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01231812127/" class="item">
-              <img src="images/onepice/item-onepice-06.jpg" width="100%">
+              <img class="lazyload" data-src="images/onepice/item-onepice-06.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01231812127/">
@@ -521,19 +508,19 @@
                 </div>              
           </div>
         </div>  
-        <div class="text-center">
-          <a href="" class="btn btn-dark btn-sm btn-more"><i class="fas fa-arrow-right"></i> View More</a>
+        <div class="btn-more-area">
+          <a href="https://item.rakuten.co.jp/liaanela/c/0000000106/" class="btn btn-dark btn-sm btn-more"><i class="fas fa-arrow-right"></i> View More</a>
           </div>
       </div>
     </div>
 
     <!-- setup -->
     <div class="setup tabcontent" id="setup">
-      <div class="container">
+      <div class="container inner-container">
         <div class="main-carousel-4 owl-theme">
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01371912422/" class="item">
-              <img src="images/setup/item-setup-01.jpg" width="100%">
+              <img class="lazyload" data-src="images/setup/item-setup-01.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01371912422/">
@@ -544,7 +531,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01371912379/" class="item">
-              <img src="images/setup/item-setup-02.jpg" width="100%">
+              <img class="lazyload" data-src="images/setup/item-setup-02.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01371912379/">
@@ -555,7 +542,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01371822116/" class="item">
-              <img src="images/setup/item-setup-03.jpg" width="100%">
+              <img class="lazyload" data-src="images/setup/item-setup-03.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01371822116/">
@@ -566,7 +553,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01371912414/" class="item">
-              <img src="images/setup/item-setup-04.jpg" width="100%">
+              <img class="lazyload" data-src="images/setup/item-setup-04.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01371912414/">
@@ -577,7 +564,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01371912416/" class="item">
-              <img src="images/setup/item-setup-05.jpg" width="100%">
+              <img class="lazyload" data-src="images/setup/item-setup-05.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01371912416/">
@@ -588,7 +575,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01371822231/" class="item">
-              <img src="images/setup/item-setup-06.jpg" width="100%">
+              <img class="lazyload" data-src="images/setup/item-setup-06.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01371822231/">
@@ -598,19 +585,19 @@
                 </div>              
           </div>
         </div>
-        <div class="text-center">
-          <a href="" class="btn btn-dark btn-sm btn-more"><i class="fas fa-arrow-right"></i> View More</a>
+        <div class="btn-more-area">
+          <a href="https://item.rakuten.co.jp/liaanela/c/0000000107/" class="btn btn-dark btn-sm btn-more"><i class="fas fa-arrow-right"></i> View More</a>
           </div>
       </div>
     </div>  
 
     <!-- party -->
     <div class="party tabcontent" id="party">
-      <div class="container">
+      <div class="container inner-container">
         <div class="main-carousel-5 owl-theme">
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01241811010/" class="item">
-              <img src="images/party/item-party-01.png" width="100%">
+              <img class="lazyload" data-src="images/party/item-party-01.png" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01241811010/">
@@ -621,7 +608,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01241811011/" class="item">
-              <img src="images/party/item-party-02.png" width="100%">
+              <img class="lazyload" data-src="images/party/item-party-02.png" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01241811011/">
@@ -632,7 +619,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01701812141/" class="item">
-              <img src="images/party/item-party-03.png" width="100%">
+              <img class="lazyload" data-src="images/party/item-party-03.png" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01701812141/">
@@ -643,7 +630,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01181811132/" class="item">
-              <img src="images/party/item-party-04.png" width="100%">
+              <img class="lazyload" data-src="images/party/item-party-04.png" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01181811132/">
@@ -654,7 +641,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01851812026/" class="item">
-              <img src="images/party/item-party-05.png" width="100%">
+              <img class="lazyload" data-src="images/party/item-party-05.png" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01851812026/">
@@ -665,7 +652,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01241812196/" class="item">
-              <img src="images/party/item-party-06.jpg" width="100%">
+              <img class="lazyload" data-src="images/party/item-party-06.jpg" width="100%">
             </a>
                 <div class="txt-account text-center">
                   <a href="https://item.rakuten.co.jp/liaanela/01241812196/">
@@ -675,19 +662,19 @@
                 </div>              
           </div>
         </div>
-        <div class="text-center">
-          <a href="" class="btn btn-dark btn-sm btn-more"><i class="fas fa-arrow-right"></i> View More</a>
+        <div class="btn-more-area">
+          <a href="https://item.rakuten.co.jp/liaanela/c/0000000130/" class="btn btn-dark btn-sm btn-more"><i class="fas fa-arrow-right"></i> View More</a>
         </div>
       </div>
     </div>  
 
     <!-- accessary -->
     <div class="accessary tabcontent" id="accessary">
-      <div class="container">
+      <div class="container inner-container">
         <div class="main-carousel-6 owl-theme">
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01851912351/" class="item">
-              <img src="images/accesary/item-accesary-01.jpg" width="100%">
+              <img class="lazyload" data-src="images/accesary/item-accesary-01.jpg" width="100%">
             </a>
             <div class="txt-account text-center">
               <a href="https://item.rakuten.co.jp/liaanela/01851912351/">
@@ -698,7 +685,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01811822207/" class="item">
-              <img src="images/accesary/item-accesary-02.png" width="100%">
+              <img class="lazyload" data-src="images/accesary/item-accesary-02.png" width="100%">
             </a>
             <div class="txt-account text-center">
               <a href="https://item.rakuten.co.jp/liaanela/01811822207/">
@@ -709,7 +696,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01811822190/" class="item">
-              <img src="images/accesary/item-accesary-03.png" width="100%">
+              <img class="lazyload" data-src="images/accesary/item-accesary-03.png" width="100%">
             </a>
             <div class="txt-account text-center">
               <a href="https://item.rakuten.co.jp/liaanela/01811822190/">
@@ -720,7 +707,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01821822200/" class="item">
-              <img src="images/accesary/item-accesary-04.png" width="100%">
+              <img class="lazyload" data-src="images/accesary/item-accesary-04.png" width="100%">
             </a>
             <div class="txt-account text-center">
               <a href="https://item.rakuten.co.jp/liaanela/01821822200/">
@@ -731,7 +718,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01701822262/" class="item">
-              <img src="images/accesary/item-accesary-05.jpg" width="100%">
+              <img class="lazyload" data-src="images/accesary/item-accesary-05.jpg" width="100%">
             </a>
             <div class="txt-account text-center">
               <a href="https://item.rakuten.co.jp/liaanela/01701822262/">
@@ -742,7 +729,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01841822158/" class="item">
-              <img src="images/accesary/item-accesary-06.png" width="100%">
+              <img class="lazyload" data-src="images/accesary/item-accesary-06.png" width="100%">
             </a>
             <div class="txt-account text-center">
               <a href="https://item.rakuten.co.jp/liaanela/01841822158/">
@@ -752,19 +739,19 @@
             </div>              
           </div>
         </div>
-        <div class="text-center">
-          <a href="" class="btn btn-dark btn-sm btn-more"><i class="fas fa-arrow-right"></i> View More</a>
+        <div class="btn-more-area">
+          <a href="https://item.rakuten.co.jp/liaanela/c/0000000100/" class="btn btn-dark btn-sm btn-more"><i class="fas fa-arrow-right"></i> View More</a>
           </div>
       </div>
     </div>  
 
     <!-- wingpants -->
     <div class="wingpants tabcontent" id="wingpants">
-      <div class="container">
+      <div class="container inner-container">
         <div class="main-carousel-7 owl-theme">
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01161822117_01/" class="item">
-              <img src="images/wingpants/item-wingpants-01.jpg" width="100%">
+              <img class="lazyload" data-src="images/wingpants/item-wingpants-01.jpg" width="100%">
             </a>
             <div class="txt-account text-center">
               <a href="https://item.rakuten.co.jp/liaanela/01161822117_01/">
@@ -775,7 +762,7 @@
           </div>
           <div class="carousel-cell">
             <a href="https://item.rakuten.co.jp/liaanela/01161822125/" class="item">
-              <img src="images/wingpants/item-wingpants-02.png" width="100%">
+              <img class="lazyload" data-src="images/wingpants/item-wingpants-02.png" width="100%">
             </a>
             <div class="txt-account text-center">
               <a href="https://item.rakuten.co.jp/liaanela/01161822125/">
@@ -784,46 +771,10 @@
               <span class="d-block txt-price">5378<small>円</small></span>
             </div>              
           </div>
-          <!-- <div class="carousel-cell">
-            <a href="" class="item">
-              <img src="images/wingpants/item-wingpants-03.png" width="100%">
-                <div class="txt-account text-center">
-                  <span class="txt-product"></span>
-                  <span class="d-block txt-price">000000<small>円</small></span>
-                </div>              
-            </a>
-          </div>
-          <div class="carousel-cell">
-            <a href="" class="item">
-              <img src="images/wingpants/item-wingpants-04.png" width="100%">
-                <div class="txt-account text-center">
-                  <span class="txt-product"></span>
-                  <span class="d-block txt-price">000000<small>円</small></span>
-                </div>              
-            </a>
-          </div>
-          <div class="carousel-cell">
-            <a href="" class="item">
-              <img src="images/wingpants/item-wingpants-05.jpg" width="100%">
-                <div class="txt-account text-center">
-                  <span class="txt-product"></span>
-                  <span class="d-block txt-price">0000000<small>円</small></span>
-                </div>              
-            </a>
-          </div>
-          <div class="carousel-cell">
-            <a href="" class="item">
-              <img src="images/wingpants/item-wingpants-06.png" width="100%">
-                <div class="txt-account text-center">
-                  <span class="txt-product"></span>
-                  <span class="d-block txt-price">000000<small>円</small></span>
-                </div>              
-            </a>
-          </div> -->
         </div>
-        <div class="text-center">
-          <a href="" class="btn btn-dark btn-sm btn-more"><i class="fas fa-arrow-right"></i> View More</a>
-          </div>
+        <div class="btn-more-area">
+          <a href="https://item.rakuten.co.jp/liaanela/c/0000000150/" class="btn btn-dark btn-sm btn-more"><i class="fas fa-arrow-right"></i> View More</a>
+        </div>
       </div>
     </div>    
   </div>
@@ -914,7 +865,7 @@
     </div>
     <div class="rankingBest-area"> 
         <div class="container container-mobile">
-            <ul class="row list-unstyled list-items">
+            <ul class="row list-unstyled list-items mgb0">
               <li class="col-sm col-12">
                 <a href="https://item.rakuten.co.jp/liaanela/01121822306/" class="item">
                   <img src="images/ranking/item-rank-01.jpg" width="100%">
@@ -971,7 +922,7 @@
                 </div>
               </li>
             </ul>
-            <div class="text-center">
+            <div class="text-right">
             <a href="https://www.rakuten.ne.jp/gold/liaanela/ranking/" class="btn btn-dark btn-sm more btn-more"><i class="fas fa-arrow-right"></i> View More</a>
             </div>
         </div>
@@ -985,7 +936,7 @@
   </div>
   <div class="rankingBest-area"> 
       <div class="container container-mobile">
-          <ul class="row list-unstyled list-items">
+          <ul class="row list-unstyled list-items mgb0">
             <li class="col-sm col-6">
               <a href="https://item.rakuten.co.jp/liaanela/01051822122/" class="item">
                 <img src="images/all/all-item-01.jpg" width="100%">
@@ -1054,14 +1005,14 @@
               </div>
             </li>            
           </ul>
-          <div class="text-center">
+          <div class="text-right">
           <a href="https://item.rakuten.co.jp/liaanela/c/0000000147/" class="btn btn-dark btn-sm more btn-more"><i class="fas fa-arrow-right"></i> View More</a>
         </div>
       </div>
   </div>
 </sction>
 
-<footer>
+<footer id="footer">
     <section class="container-fluid inner-footer accordion">
       <div class="row">
         <div class="col-md-3 col-12 guide-area">
@@ -1171,6 +1122,7 @@
 .owl-item {float: left;}
 </style>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> 
+<script src="jquery_lazyload/lazyload.min.js"></script>
 <script src="common/js/owl.carousel.js"></script>
 <script src="common/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="common/js/common-lia.js"></script>
