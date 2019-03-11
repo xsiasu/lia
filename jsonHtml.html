@@ -1,78 +1,112 @@
 <!DOCTYPE html>
 <html>
+    
 <body>
 
 <ul id="newItems">
 </ul>
 
+<div data-role="content" id="content">
+        <ul id="productList" data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
+        </ul>
+    </div>
 
 
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> 
 <script>
-let product = {
-    "results": [
-        {
-            "title": "RajiniKanth", 
-            "image":"https://www.rakuten.ne.jp/gold/liaanela/images/new-item/new-item-01.jpg",
-            "href": "https://item.rakuten.co.jp/liaanela/01231912399/", 
-            "price": 1 
-        },
-        {
-            "title": "sss", 
-            "image":"https://www.rakuten.ne.jp/gold/liaanela/images/new-item/new-item-01.jpg",
-            "href": "https://item.rakuten.co.jp/liaanela/01231912399/", 
-            "price": 2 
-        },
-        {
-            "title": "fff", 
-            "image":"https://www.rakuten.ne.jp/gold/liaanela/images/new-item/new-item-01.jpg",
-            "href": "https://item.rakuten.co.jp/liaanela/01231912399/", 
-            "price": 3 
-        },
-        {
-            "title": "RajinfgfdgiKanth", 
-            "image":"https://www.rakuten.ne.jp/gold/liaanela/images/new-item/new-item-01.jpg",
-            "href": "https://item.rakuten.co.jp/liaanela/01231912399/", 
-            "price": 4 
-        }            
-    ]
-}
 
 
-function createNode(element) {
-    return document.createElement(element);
-}
 
-function append(parent, el) {
-    return parent.appendChild(el);
-}
+$(document).ready(function(){
+    // var productList = {
+    // "products": [
+    //     {
+    //         "title": "RajiniKanth", 
+    //         "image":"https://www.rakuten.ne.jp/gold/liaanela/images/new-item/new-item-01.jpg",
+    //         "href": "https://item.rakuten.co.jp/liaanela/01231912399/", 
+    //         "price": 1 
+    //     },
+    //     {
+    //         "title": "sss", 
+    //         "image":"https://www.rakuten.ne.jp/gold/liaanela/images/new-item/new-item-01.jpg",
+    //         "href": "https://item.rakuten.co.jp/liaanela/01231912399/", 
+    //         "price": 2 
+    //     },
+    //     {
+    //         "title": "fff", 
+    //         "image":"https://www.rakuten.ne.jp/gold/liaanela/images/new-item/new-item-01.jpg",  
+    //         "href": "https://item.rakuten.co.jp/liaanela/01231912399/", 
+    //         "price": 3 
+    //     },
+    //     {
+    //         "title": "RajinfgfdgiKanth", 
+    //         "image":"https://www.rakuten.ne.jp/gold/liaanela/images/new-item/new-item-01.jpg",
+    //         "href": "https://item.rakuten.co.jp/liaanela/01231912399/", 
+    //         "price": 4 
+    //     }  
+    //     ]
+    // };
 
-let list = document.getElementById('newItems');    
 
-function ItemsPrint(productdata,list) {
-    let newItemList = productdata.results;
-    let prt = newItemList.map(newItemList => {
+    let productdata = "./product.json"  
+    
+    $.getJSON(productdata, function (data) {
+        let list = document.getElementById('newItems');   
+        $(data.products).each(function(index){
+            console.log(productdata.products);
         let content = `
             <li class='col-sm col-12'>
-                <a href='${newItemList.href}' class='item'>
-                    <img src='${newItemList.image}' width='100%'  max-width='340px'>
+                <a href='${this.href}' class='item'>
+                    <img src='${this.image}' width='10px'  max-width='10px'>
                 </a>
                 <div class='txt-account'>
-                  <a href='${newItemList.href}'>
-                  <span class='txt-product'>${newItemList.title}</span>
+                  <a href='${this.href}'>
+                    <span class='txt-product'>${this.title}</span>
                   </a>
-                  <span class='d-block txt-price'>${newItemList.price}<small>円</small></span>
+                  <span class='d-block txt-price'>${this.price}<small>円</small></span>
                 </div>
-            </li>`;
-        return content;
+            </li>`;        
+        $(list).append(content);
+        });
     });
-    list.innerHTML = prt;
-}
 
-new ItemsPrint(product, list);
+});
 
 
 
 
+// function createNode(element) {
+//     return document.createElement(element);
+// }
+
+// function append(parent, el) {
+//     return parent.appendChild(el);
+// }
+
+ 
+
+// function ItemsPrint(productdata,list) {
+//     let newItemList = productdata.results;
+//     let prt = newItemList.map(newItemList => {
+//         let content = `
+//             <li class='col-sm col-12'>
+//                 <a href='${newItemList.href}' class='item'>
+//                     <img src='${newItemList.image}' width='10px'  max-width='10px'>
+//                 </a>
+//                 <div class='txt-account'>
+//                   <a href='${newItemList.href}'>
+//                     <span class='txt-product'>${newItemList.title}</span>
+//                   </a>
+//                   <span class='d-block txt-price'>${newItemList.price}<small>円</small></span>
+//                 </div>
+//             </li>`;
+        
+//         return content;
+//     });
+//     list.innerHTML = prt;
+// }
+
+// new ItemsPrint(product, list);
 
 </script>
 
